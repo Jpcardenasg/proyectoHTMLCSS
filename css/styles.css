@@ -20,13 +20,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     width: 100%;
     color: var(--color-primary-text);
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 500;
     color: var(--color-primary-text);
 }
@@ -64,10 +64,6 @@ section {
     font-size: 1.5rem;
 }
 
-.navbar {
-    display: none;
-}
-
 .navbar.active {
     display: inline-block;
     position: absolute;
@@ -75,30 +71,41 @@ section {
     top: 60px;
     left: 0;
     width: 100vw;
-    color: var(--color-secondary-text);
+    font-size: 2rem;
     background-color: var(--color-background-menu);
 }
 
 .navbar ul {
+    display: none;
     list-style: none;
-
-    & li {
-        font-size: 2rem;
-        margin: 1.2rem 0;
-    }
 }
 
+.navbar li:hover{
+    padding: 8px;
+    border: 1px solid var(--color-icons);
+    border-radius: 4px;
+    cursor: pointer;
+}   
 
-.section-info {
+a {
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 1.2rem 0;
+    color: var(--color-secondary-text);
+}
+
+.section-info, .service, .services {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.2rem;
     text-align: center;
+    gap: 1.2rem;
+    width: 80%;
 }
 
 .main-button {
+    width: fit-content;
     border: 0;
     padding: 0.5rem;
     background-color: var(--color-primary-text);
@@ -106,7 +113,7 @@ section {
 }
 
 img {
-    width: 90%;
+    width: 70%;
     margin-top: 1.2rem;
 }
 
@@ -122,7 +129,6 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     margin-top: 25px;
     border: 1px solid black;
     color: var(--color-tertiary-text);
@@ -133,8 +139,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    right: 5px;
+    align-self: flex-end;
+    margin-right: 5px;
     width: 40px;
     height: 40px;
     background-color: var(--color-primary-text);
@@ -219,4 +225,3 @@ img {
     font-size: 2.5rem;
     color: var(--color-primary-text);
 }
-
