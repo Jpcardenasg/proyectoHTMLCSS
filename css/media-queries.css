@@ -1,0 +1,91 @@
+/* Estilos para tablets en posición vertical */
+@media screen and (min-width: 577px) {
+}
+
+/* Estilos para tablets en posición horizontal */
+@media screen and (min-width: 768px) {
+}
+
+/* Estilos para laptops y computadoras de escritorio */
+@media screen and (min-width: 992px) {
+    * {
+        font-size: 18px;
+    }
+
+    header {
+        padding: 20px 50px;
+    }
+
+    img {
+        width: 30%;
+    }
+
+    .navbar ul{
+        display: flex;
+        gap: 60px;
+    }
+    .menu-icon {
+        display: none;
+    }
+
+    section {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .section-info {
+        width: 31%;
+        align-items: start;
+        text-align: start;
+    }
+
+    .about-section {
+        flex-direction: row-reverse;
+    }
+
+    .menu-section, .service-section {
+        flex-direction: column;
+    }
+    
+    .menu, .service-info, .quality {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu-cards, .services, .contacts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 30%;
+    }
+
+    .quality {
+        width: 90%;
+    }
+
+    .contact-section {
+        align-items: start;
+        justify-content: space-evenly;
+    }
+
+    .contact {
+        width: auto;
+        margin: 0;
+    }
+
+    .contact-section i {
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilos para pantallas más grandes */
+@media screen and (min-width: 1200px) {
+
+    * {
+        font-size: 20px;
+    }
+}
