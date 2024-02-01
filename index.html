@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="" href="js/main.js" defer>
 </head>
 <body>
 
     <header>
         <div class="logo"><h2>Foods</h2></div>
-        <nav>
-            <i class="bx bx-menu menu-icon"></i>
-            <div class="navbar">
-                <ul>
-                    <li><a href="#banner-section">Home</a></li>
-                    <li><a href="#about-section">About</a></li>
-                    <li><a href="#menu-section">Menu</a></li>
-                    <li><a href="#service-section">Service</a></li>
-                    <li><a href="#contact-section">Contact</a></li>
-                </ul>
-            </div>
+        <i class="bx bx-menu menu-icon"></i>
+        <nav class="navbar">
+            <i class='bx bx-x close-icon'></i>
+            <ul class="navbar-ul">
+                <li><a href="#banner-section">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#menu-section">Menu</a></li>
+                <li><a href="#service-section">Service</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -30,7 +30,7 @@
         <section id="banner-section" class="banner-section">
             <div class="banner section-info">
                 <h1>Full Website</h1>
-                <p class="p-balance">Foods the <br/> Most precious thing</p>
+                <p>Foods the <br/> Most precious thing</p>
                 <button class="main-button">Today's Menu</button>
             </div>
             <img src="storage/img/home.png" alt="Image of a hamburger, fries and coke">
@@ -41,7 +41,7 @@
             <div class="about section-info">
                 <h4>About Us</h4>
                 <span class="description-span">We speak the good <br/> food language</span>
-                <p class="p-balance">
+                <p>
                     It is a long established fact that a be distracted by the readable content looking at its layout. The point of
                 </p>
                 <button class="main-button">Learn More</button>
@@ -90,17 +90,17 @@
                 <div class="service">
                     <img class="service-img" src="storage/img/s1.png" alt="A delivery box">
                     <h3>Order</h3>
-                    <p class="p-balance">It is a long established be distracted by the readable looking at its layout. </p>
+                    <p>It is a long established be distracted by the readable looking at its layout. </p>
                 </div>
                 <div class="service">
                     <img class="service-img" src="storage/img/s2.png" alt="A delivery truck">
                     <h3>Shipping</h3>
-                    <p class="p-balance">It is a long established be distracted by the readable looking at its layout. </p>
+                    <p>It is a long established be distracted by the readable looking at its layout. </p>
                 </div>
                 <div class="service">
                     <img class="service-img" src="storage/img/s3.png" alt="A hand holding a package">
                     <h3>Delivered</h3>
-                    <p class="p-balance">It is a long established be distracted by the readable looking at its layout. </p>
+                    <p>It is a long established be distracted by the readable looking at its layout. </p>
                 </div>
             </div>
         </section>
@@ -118,6 +118,7 @@
             
             <div class="contact">
                 <h6>Menu Links</h6>
+                <hr>
                 <ul>
                     <li><a href="#banner-section">Home</a></li>
                     <li><a href="#about-section">About</a></li>
@@ -128,6 +129,7 @@
             </div>
             <div class="contact">
                 <h6>Our Service</h6>
+                <hr>
                 <ul>
                     <li><a href="">Web Design</a></li>
                     <li><a href="">Web Development</a></li>
@@ -138,6 +140,7 @@
             </div>
             <div class="contact">
                 <h6>Information</h6>
+                <hr>
                 <ul>
                     <li><a href="">About Us</a></li>
                     <li><a href="">Delivery Information</a></li>
@@ -145,18 +148,19 @@
                     <li><a href="">Terms & Conditions</a></li>
                 </ul>
             </div>
-        <div>
-            <h6>Contact Us</h6>
-            <div class="contact-icon">
-                <i class='bx bxs-circle'></i>
-                <i class='bx bxs-circle'></i>
-                <i class='bx bxs-circle'></i>
-                <i class='bx bxs-circle'></i>
+            <div>
+                <h6>Contact Us</h6>
+                <hr>
+                <div class="contact-icon">
+                    <i class='bx bxs-circle'></i>
+                    <i class='bx bxs-circle'></i>
+                    <i class='bx bxs-circle'></i>
+                    <i class='bx bxs-circle'></i>
+                </div>
             </div>
-        </div>
         </section>
 
     </main>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
