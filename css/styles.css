@@ -7,7 +7,11 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: var(--font-size-base);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,9 +24,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
     padding: 30px;
     width: 100%;
     color: var(--color-primary-text);
+    background-color: var(--color-background);
 }
 
 h1 {
@@ -49,7 +56,7 @@ h4 {
 }
 
 h6 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
 }
 
@@ -60,39 +67,78 @@ section {
     margin-bottom: 6rem;
 }
 
+.banner-section {
+    margin-top: 123px;
+}
+
 .menu-icon {
     font-size: 1.5rem;
 }
 
-.navbar.active {
-    display: inline-block;
-    position: absolute;
+.navbar {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    top: 60px;
+    position: fixed;
+    top: 80px;
     left: 0;
     width: 100vw;
     font-size: 2rem;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+}
+
+.navbar.active {
     background-color: var(--color-background-menu);
+    transform: translateX(0);
+}
+
+.close-icon {
+    display: none;
+    position: absolute;
+    right: 4%;
+    font-size: 2.2rem;
 }
 
 .navbar ul {
-    display: none;
+    padding: 20px 0;
+}
+
+ul {
     list-style: none;
 }
 
-.navbar li:hover{
-    padding: 8px;
-    border: 1px solid var(--color-icons);
-    border-radius: 4px;
-    cursor: pointer;
-}   
+.navbar li {
+    margin-top: 20px;
+    padding: 5px 10px;
+}
 
 a {
     text-decoration: none;
-    font-size: 1rem;
-    margin: 1.2rem 0;
+    font-size: 1.5rem;
     color: var(--color-secondary-text);
+    position: relative;
 }
+
+a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px; 
+    background-color: var(--color-secondary-text);
+    transition: width 0.5s ease-in-out;
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+a:hover{
+    color: var(--color-primary-text);
+    cursor: pointer;
+}   
 
 .section-info, .service, .services {
     display: flex;
@@ -110,6 +156,12 @@ a {
     padding: 0.5rem;
     background-color: var(--color-primary-text);
     color: var(--color-secondary-text);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px var(--color-primary-text);
 }
 
 img {
@@ -119,16 +171,14 @@ img {
 
 .description-span {
     font-size: 2rem;
-}
-
-.p-balance {
-    text-wrap: balance;
+    font-weight: 500;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     margin-top: 25px;
     border: 1px solid black;
     color: var(--color-tertiary-text);
@@ -140,7 +190,7 @@ img {
     align-items: center;
     justify-content: center;
     align-self: flex-end;
-    margin-right: 5px;
+    margin: 5px 5px 0 0;
     width: 40px;
     height: 40px;
     background-color: var(--color-primary-text);
@@ -148,6 +198,10 @@ img {
 
 .menu-img {
     width: 60%;
+}
+
+.menu-cards {
+    margin-top: 20px;
 }
 
 .card-icon i {
@@ -179,7 +233,7 @@ img {
 }
 
 .service-img {
-    width: 50%;
+    width: 65%;
     margin-top: 4rem;
 }
 
@@ -188,7 +242,7 @@ img {
 }
 
 .service p {
-    width: 80%;
+    width: 100%;
     font-size: 1.1rem;
 }
 
@@ -214,14 +268,19 @@ img {
 .contact ul {
     margin-top: 16px;
     list-style: none;
+}
 
-    & li {
-        font-size: 20px;
-    }
+.contact a {
+    font-size: 1rem;
 }
 
 .contact-section i {
     margin-top: 16px;
     font-size: 2.5rem;
     color: var(--color-primary-text);
+}
+
+hr {
+    width: 15vw;
+    border: 1px solid var(--color-primary-text);
 }

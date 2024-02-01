@@ -1,5 +1,7 @@
 
 :root {
+    --font-size-base: 16px;
+    --font-size-desktop: 22px;
     --color-primary-text: #ff702a;
     --color-secondary-text: #fff;
     --color-tertiary-text: #000;
